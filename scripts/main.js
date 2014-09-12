@@ -19,7 +19,20 @@ var app = {
     // }
     user_data: {
         page_current: '', 
-        pages: [],
+        pages: [
+            {
+                'id': 'p-1',
+                'name': 'Page 1'
+            },
+            {
+                'id': 'p-2',
+                'name': 'Page 2'
+            },
+            {
+                'id': 'p-3',
+                'name': 'Page 3'
+            },
+        ],
         widgets: {}
     },
 
@@ -36,14 +49,6 @@ var app = {
             {
                 'id': 'p-1',
                 'name': 'Page 1'
-            },
-            {
-                'id': 'p-2',
-                'name': 'Page 2'
-            },
-            {
-                'id': 'p-3',
-                'name': 'Page 3'
             },
         ],
         page_init_name: 'new page',
@@ -126,6 +131,8 @@ var app = {
             app.user_data.page_current = page_id;
 
             $(app.config.canvas_element)[0].innerHTML = '';
+
+            var widgets = app.user_data.widgets[page_id];
         },
 
         // addPage / removePage
@@ -291,25 +298,32 @@ var app = {
         saveCampaign: function(){},
     },
 
-    init: {
-        // 1. load data
-        // 2. if new, load data from config
+    init: function(){
+        /*
         newCampaign: function(){
         },
         loadCampaign: function(){
         },
+        */
+        /*
+         * TODO: AJAX get data from remote server, parse and store in user_data
+         */
+        var data = app.user_data;
+        app.page.initPage(data.pages);
+
+        app.ui.init();
     }
 };
 
-app.page.initPage(app.config.page_init);
-app.ui.init();
-
+app.init();
 
 //a = app.initWidget('text');
+/*
 a = app.widget.initWidget('text', {'text': 'http://www.baidu.com/1.jpg',
                                     'position': {'x': 400, 'y': 200},
                                     'size': {'w': 500, 'h': 100}
                                   });
 b = app.widget.initWidget('image', {'url': 'http://jqueryui.com/jquery-wp-content/themes/jquery/images/logo-jquery-ui.png'});
 c = app.widget.initWidget('video', {'url': 'https://a0.muscache.com/airbnb/static/Croatia-P1-0.webm'});
+*/
 //app.init();
