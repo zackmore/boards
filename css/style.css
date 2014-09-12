@@ -1,0 +1,116 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+html {
+  font: 16px/1.6 'Open Sans', Arial, 'Hiragino Sans GB',
+                  'Microsoft YaHei', 微软雅黑, STHeiti,
+                  'WenQuanYi Micro Hei', SimSun, sans-serif;
+  color: #333;
+}
+ol, ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#header,
+#footer {
+  background: #333;
+  overflow: hidden;
+  padding: 0 15px;
+  color: #fff;
+}
+
+#header {
+  height: 50px;
+}
+#header h1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 50px;
+}
+
+#footer h4 {
+  font-weight: 400;
+}
+
+#content {
+  min-height: 600px;
+  position: relative;
+}
+
+#editor {
+  position: relative;
+}
+
+.menu.side {
+  position: fixed;
+  top: 90px;
+  border: 1px solid #666;
+  width: 90px;
+  text-align: center;
+}
+.menu.side.left {
+  left: 0;
+  border-left: 0;
+}
+.menu.side.right {
+  right: 0;
+  border-right: 0;
+}
+.menu.side h3 {
+  background: #333;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.menu.side li {
+  border-bottom: 1px solid #ccc;
+}
+.menu.side li:last-child {
+  border: 0;
+}
+.menu.side li a {
+  display: block;
+  color: #333;
+  background: #fff;
+  padding: 10px 0;
+  text-decoration: none;
+}
+.menu.side li a:hover {
+  background: #e1e1e1;
+}
+.menu.side li a:active,
+.menu.side li a.active {
+  background: #0078a0;
+  color: #fff;
+}
+
+#canvas {
+  height: 800px;
+  margin: 40px 120px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+
+.widget {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  cursor: move;
+  border: 1px solid #ccc;
+  word-break: break-all;
+  overflow: hidden;
+}
+.widget img,
+.widget video {
+  width: 100%;
+}

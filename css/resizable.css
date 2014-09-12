@@ -1,0 +1,78 @@
+/*!
+ * jQuery UI Resizable 1.11.1
+ * http://jqueryui.com
+ *
+ * Copyright 2014 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+.ui-resizable {
+	position: relative;
+}
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 15px;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 15px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 15px;
+	right: 0;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 15px;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-se {
+	cursor: se-resize;
+	width: 15px;
+	height: 15px;
+	right: 0;
+	bottom: 0;
+}
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 15px;
+	height: 15px;
+	left: 0;
+	bottom: 0;
+}
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 15px;
+	height: 15px;
+	left: 0;
+	top: 0;
+}
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 15px;
+	height: 15px;
+	right: 0;
+	top: 0;
+}
