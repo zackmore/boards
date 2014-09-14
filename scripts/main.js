@@ -12,8 +12,7 @@ var app = {
     //     widgets: {
     //         'page_id': {
     //             widget_id: widget_object,
-    //             ...
-    //         },
+    //             ...   //         },
     //         ...
     //     }
     // }
